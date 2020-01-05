@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CA2E8A5823C224100019E107 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8A5723C224100019E107 /* AppDelegate.swift */; };
-		CA2E8A5A23C224100019E107 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8A5923C224100019E107 /* SceneDelegate.swift */; };
 		CA2E8A5C23C224100019E107 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8A5B23C224100019E107 /* ViewController.swift */; };
-		CA2E8A5F23C224100019E107 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA2E8A5D23C224100019E107 /* Main.storyboard */; };
 		CA2E8A6123C224110019E107 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA2E8A6023C224110019E107 /* Assets.xcassets */; };
 		CA2E8A6423C224110019E107 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA2E8A6223C224110019E107 /* LaunchScreen.storyboard */; };
 		CA2E8A6F23C224110019E107 /* NYTFeedReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8A6E23C224110019E107 /* NYTFeedReaderTests.swift */; };
@@ -29,9 +27,7 @@
 /* Begin PBXFileReference section */
 		CA2E8A5423C224100019E107 /* NYTFeedReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYTFeedReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA2E8A5723C224100019E107 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CA2E8A5923C224100019E107 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CA2E8A5B23C224100019E107 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CA2E8A5E23C224100019E107 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CA2E8A6023C224110019E107 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA2E8A6323C224110019E107 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA2E8A6523C224110019E107 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,9 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				CA2E8A5723C224100019E107 /* AppDelegate.swift */,
-				CA2E8A5923C224100019E107 /* SceneDelegate.swift */,
 				CA2E8A5B23C224100019E107 /* ViewController.swift */,
-				CA2E8A5D23C224100019E107 /* Main.storyboard */,
 				CA2E8A6023C224110019E107 /* Assets.xcassets */,
 				CA2E8A6223C224110019E107 /* LaunchScreen.storyboard */,
 				CA2E8A6523C224110019E107 /* Info.plist */,
@@ -182,7 +176,6 @@
 			files = (
 				CA2E8A6423C224110019E107 /* LaunchScreen.storyboard in Resources */,
 				CA2E8A6123C224110019E107 /* Assets.xcassets in Resources */,
-				CA2E8A5F23C224100019E107 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +195,6 @@
 			files = (
 				CA2E8A5C23C224100019E107 /* ViewController.swift in Sources */,
 				CA2E8A5823C224100019E107 /* AppDelegate.swift in Sources */,
-				CA2E8A5A23C224100019E107 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,14 +217,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CA2E8A5D23C224100019E107 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CA2E8A5E23C224100019E107 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CA2E8A6223C224110019E107 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -365,6 +349,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z69GNQ6AMF;
 				INFOPLIST_FILE = NYTFeedReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -372,7 +357,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dev.jerosanchez.NYTFeedReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -383,6 +368,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z69GNQ6AMF;
 				INFOPLIST_FILE = NYTFeedReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -390,7 +376,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dev.jerosanchez.NYTFeedReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
