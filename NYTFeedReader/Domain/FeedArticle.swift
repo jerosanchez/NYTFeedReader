@@ -14,6 +14,7 @@ struct FeedArticle {
     let author: String?
     let section: String?
     let publishedDate: String?
+    let media: [FeedArticleMedia]?
 }
 
 extension FeedArticle: Decodable {
@@ -24,6 +25,7 @@ extension FeedArticle: Decodable {
         case author = "byline"
         case section
         case publishedDate = "published_date"
+        case media
     }
     
     init(from decoder: Decoder) throws {
@@ -34,5 +36,6 @@ extension FeedArticle: Decodable {
         self.author = try? container.decode(String.self, forKey: .author)
         self.section = try? container.decode(String.self, forKey: .section)
         self.publishedDate = try? container.decode(String.self, forKey: .publishedDate)
+        self.media = try? container.decode([FeedArticleMedia].self, forKey: .media)
     }
 }

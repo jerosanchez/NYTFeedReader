@@ -48,14 +48,6 @@ class FeedArticleMediaTests: XCTestCase {
         }
     }
     
-    private func makeRandomMediaMetadata() -> [MediaMetadata] {
-        var metadata = [MediaMetadata]()
-        for _ in 1...Int.random(in: 1...10) {
-            metadata.append(MediaMetadata(urlString: UUID().description))
-        }
-        return metadata
-    }
-    
     private func jsonFeedArticleMedia() -> Data {
         let jsonString = """
         {

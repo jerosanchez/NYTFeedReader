@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct FeedArticleMedia {
+struct FeedArticleMedia: Equatable {
     let type: String?
     let metadata: [MediaMetadata]?
 }

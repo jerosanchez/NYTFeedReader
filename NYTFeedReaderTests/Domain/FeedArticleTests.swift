@@ -53,22 +53,42 @@ class FeedArticleTests: XCTestCase {
         XCTAssertEqual(randomPublishedDate, sut.publishedDate)
     }
     
+    func test_Init_GivenMetadata_SetsMetadata() {
+        let randomMediaMetadata = makeRandomMediaMetadata()
+        let randomMedia = FeedArticleMedia(type: UUID().description, metadata: randomMediaMetadata)
+        
+        let sut = makeSutWith(media: [randomMedia])
+        
+        XCTAssertEqual(1, sut.media?.count)
+        XCTAssertEqual(randomMedia, sut.media?.first!)
+    }
+    
     func test_Init_GivenJSON_DecodesCorrectly() {
         let feedArticle = try? JSONDecoder().decode(FeedArticle.self, from: jsonFeedArticle())
         
         XCTAssertNotNil(feedArticle, "could not decode JSON feed article")
     }
-    
-    // MARK: - Helpers
+}
+
+// MARK: - Helpers
+
+extension FeedArticleTests {
     
     private func makeSutWith(
         articleURL: String? = UUID().description,
         title: String? = UUID().description,
         author: String? = UUID().description,
         section: String? = UUID().description,
-        publishedDate: String? = UUID().description) -> FeedArticle {
+        publishedDate: String? = UUID().description,
+        media: [FeedArticleMedia]? = nil) -> FeedArticle {
         
-        return FeedArticle(articleURL: articleURL, title: title, author: author, section: section, publishedDate: publishedDate)
+        if let media = media {
+            return FeedArticle(articleURL: articleURL, title: title, author: author, section: section, publishedDate: publishedDate, media: media)
+        } else {
+            let randomMediaMetadata = makeRandomMediaMetadata()
+            let randomMedia = FeedArticleMedia(type: UUID().description, metadata: randomMediaMetadata)
+            return FeedArticle(articleURL: articleURL, title: title, author: author, section: section, publishedDate: publishedDate, media: [randomMedia])
+        }
     }
     
     private func jsonFeedArticle() -> Data {
