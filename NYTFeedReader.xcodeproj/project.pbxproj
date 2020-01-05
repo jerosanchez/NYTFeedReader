@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -53,6 +53,7 @@
 		CAD870EF23C26580008A80C5 /* FeedFilterCriteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD870EE23C26580008A80C5 /* FeedFilterCriteria.swift */; };
 		CAD870F123C2661A008A80C5 /* FeedFilterCriteriaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD870F023C2661A008A80C5 /* FeedFilterCriteriaTests.swift */; };
 		CAD870F323C269C3008A80C5 /* FeedFilterAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD870F223C269C3008A80C5 /* FeedFilterAssembly.swift */; };
+		CAD870F523C2818C008A80C5 /* ValuePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD870F423C2818C008A80C5 /* ValuePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,7 @@
 		CAD870EE23C26580008A80C5 /* FeedFilterCriteria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFilterCriteria.swift; sourceTree = "<group>"; };
 		CAD870F023C2661A008A80C5 /* FeedFilterCriteriaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFilterCriteriaTests.swift; sourceTree = "<group>"; };
 		CAD870F223C269C3008A80C5 /* FeedFilterAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFilterAssembly.swift; sourceTree = "<group>"; };
+		CAD870F423C2818C008A80C5 /* ValuePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValuePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +161,6 @@
 				8301A3A75F03B76CE4E958C9 /* Pods-NYTFeedReaderTests.debug.xcconfig */,
 				B0151E8896ED2F9DCC54E3E3 /* Pods-NYTFeedReaderTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -230,6 +231,7 @@
 				CA2E8A7B23C2257B0019E107 /* FeedFilterView.swift */,
 				CA2E8A8323C226810019E107 /* FeedFilterView+Setup.swift */,
 				CA2E8A8723C227370019E107 /* FeedFilterView+Actions.swift */,
+				CAD870F423C2818C008A80C5 /* ValuePickerView.swift */,
 			);
 			path = FeedFilter;
 			sourceTree = "<group>";
@@ -577,6 +579,7 @@
 				CA2E8ABB23C243BD0019E107 /* NYTFeedRemoteRepository.swift in Sources */,
 				CA2E8A9723C22C210019E107 /* UIStackView.swift in Sources */,
 				CA2E8A8F23C22AA20019E107 /* ArticlesListView+Setup.swift in Sources */,
+				CAD870F523C2818C008A80C5 /* ValuePickerView.swift in Sources */,
 				CA2E8A9A23C22EAB0019E107 /* AppNavigator.swift in Sources */,
 				CA2E8AA723C2367B0019E107 /* NetworkingService.swift in Sources */,
 				CA2E8A8023C226240019E107 /* VerticalStackView.swift in Sources */,

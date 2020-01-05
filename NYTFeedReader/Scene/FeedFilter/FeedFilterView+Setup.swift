@@ -27,16 +27,6 @@ extension FeedFilterView {
             timeWindowFieldLabel, UIView(), timeWindowValueLabel
         ])
         
-        let sharedStackView = VerticalStackView(arrangedSubviews: [
-            sharedInLabel,
-            UIStackView(arrangedSubviews: [
-                twitterSourceFieldLabel, UIView(), twitterSourceSwitch
-            ]),
-            UIStackView(arrangedSubviews: [
-                facebookSourceFieldLabel, UIView(), facebookSourceSwitch
-            ])
-        ], spacing: 8)
-        
         let stackView = VerticalStackView(arrangedSubviews: [
             instructionsLabel,
             articleTypeStackView,
@@ -51,6 +41,17 @@ extension FeedFilterView {
     }
     
     func setupActions() {
+        let tapArticleTypeGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapArticleType))
+        articleTypeValueLabel.addGestureRecognizer(tapArticleTypeGesture)
+        articleTypeValueLabel.isUserInteractionEnabled = true
+        
+        twitterSourceSwitch.addTarget(self, action: #selector(handleTapTwitterSwitch), for: .valueChanged)
+        facebookSourceSwitch.addTarget(self, action: #selector(handleTapFacebookSwitch), for: .valueChanged)
+
+        let tapTimeWindowGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapTimeWindow))
+        timeWindowValueLabel.addGestureRecognizer(tapTimeWindowGesture)
+        timeWindowValueLabel.isUserInteractionEnabled = true
+        
         findArticlesButton.addTarget(self, action: #selector(handleTapFindArticles), for: .touchUpInside)
     }
 }
