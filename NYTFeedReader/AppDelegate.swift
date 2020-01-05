@@ -15,10 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let homeController = FeedFilterController()
+        let homeController = ArticlesListController()
+        let navController = UINavigationController(rootViewController: homeController)
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = homeController
+        window?.rootViewController = navController
         window?.makeKeyAndVisible()
         
         return true

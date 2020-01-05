@@ -18,6 +18,13 @@
 		CA2E8A8423C226810019E107 /* FeedFilterView+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8A8323C226810019E107 /* FeedFilterView+Setup.swift */; };
 		CA2E8A8623C226F30019E107 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8A8523C226F30019E107 /* UIView+Extension.swift */; };
 		CA2E8A8823C227370019E107 /* FeedFilterView+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8A8723C227370019E107 /* FeedFilterView+Actions.swift */; };
+		CA2E8A8B23C229B60019E107 /* ArticlesListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8A8A23C229B60019E107 /* ArticlesListController.swift */; };
+		CA2E8A8D23C229F10019E107 /* ArticlesListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8A8C23C229F10019E107 /* ArticlesListDataSource.swift */; };
+		CA2E8A8F23C22AA20019E107 /* ArticlesListView+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8A8E23C22AA20019E107 /* ArticlesListView+Setup.swift */; };
+		CA2E8A9123C22B610019E107 /* ArticlesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8A9023C22B610019E107 /* ArticlesListCell.swift */; };
+		CA2E8A9323C22BB20019E107 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8A9223C22BB20019E107 /* UIImageView+Extension.swift */; };
+		CA2E8A9523C22BE10019E107 /* ArticlesListCell+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8A9423C22BE10019E107 /* ArticlesListCell+Setup.swift */; };
+		CA2E8A9723C22C210019E107 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8A9623C22C210019E107 /* UIStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +53,13 @@
 		CA2E8A8323C226810019E107 /* FeedFilterView+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedFilterView+Setup.swift"; sourceTree = "<group>"; };
 		CA2E8A8523C226F30019E107 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		CA2E8A8723C227370019E107 /* FeedFilterView+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedFilterView+Actions.swift"; sourceTree = "<group>"; };
+		CA2E8A8A23C229B60019E107 /* ArticlesListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesListController.swift; sourceTree = "<group>"; };
+		CA2E8A8C23C229F10019E107 /* ArticlesListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesListDataSource.swift; sourceTree = "<group>"; };
+		CA2E8A8E23C22AA20019E107 /* ArticlesListView+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticlesListView+Setup.swift"; sourceTree = "<group>"; };
+		CA2E8A9023C22B610019E107 /* ArticlesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesListCell.swift; sourceTree = "<group>"; };
+		CA2E8A9223C22BB20019E107 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		CA2E8A9423C22BE10019E107 /* ArticlesListCell+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticlesListCell+Setup.swift"; sourceTree = "<group>"; };
+		CA2E8A9623C22C210019E107 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +123,7 @@
 		CA2E8A7923C225380019E107 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				CA2E8A8923C229920019E107 /* ArticlesList */,
 				CA2E8A7A23C225420019E107 /* FeedFilter */,
 			);
 			path = Scene;
@@ -139,8 +154,22 @@
 				CA2E8A7F23C226240019E107 /* VerticalStackView.swift */,
 				CA2E8A8123C2264B0019E107 /* UILabel+Extension.swift */,
 				CA2E8A8523C226F30019E107 /* UIView+Extension.swift */,
+				CA2E8A9223C22BB20019E107 /* UIImageView+Extension.swift */,
+				CA2E8A9623C22C210019E107 /* UIStackView.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		CA2E8A8923C229920019E107 /* ArticlesList */ = {
+			isa = PBXGroup;
+			children = (
+				CA2E8A8A23C229B60019E107 /* ArticlesListController.swift */,
+				CA2E8A8E23C22AA20019E107 /* ArticlesListView+Setup.swift */,
+				CA2E8A8C23C229F10019E107 /* ArticlesListDataSource.swift */,
+				CA2E8A9023C22B610019E107 /* ArticlesListCell.swift */,
+				CA2E8A9423C22BE10019E107 /* ArticlesListCell+Setup.swift */,
+			);
+			path = ArticlesList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,12 +272,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA2E8A9123C22B610019E107 /* ArticlesListCell.swift in Sources */,
+				CA2E8A8B23C229B60019E107 /* ArticlesListController.swift in Sources */,
+				CA2E8A9523C22BE10019E107 /* ArticlesListCell+Setup.swift in Sources */,
+				CA2E8A9323C22BB20019E107 /* UIImageView+Extension.swift in Sources */,
 				CA2E8A8823C227370019E107 /* FeedFilterView+Actions.swift in Sources */,
 				CA2E8A5C23C224100019E107 /* FeedFilterController.swift in Sources */,
 				CA2E8A8623C226F30019E107 /* UIView+Extension.swift in Sources */,
+				CA2E8A9723C22C210019E107 /* UIStackView.swift in Sources */,
+				CA2E8A8F23C22AA20019E107 /* ArticlesListView+Setup.swift in Sources */,
 				CA2E8A8023C226240019E107 /* VerticalStackView.swift in Sources */,
 				CA2E8A8223C2264B0019E107 /* UILabel+Extension.swift in Sources */,
 				CA2E8A7C23C2257B0019E107 /* FeedFilterView.swift in Sources */,
+				CA2E8A8D23C229F10019E107 /* ArticlesListDataSource.swift in Sources */,
 				CA2E8A8423C226810019E107 /* FeedFilterView+Setup.swift in Sources */,
 				CA2E8A5823C224100019E107 /* AppDelegate.swift in Sources */,
 			);
