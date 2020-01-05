@@ -1,5 +1,5 @@
 //
-//  FeedFilterNavigator.swift
+//  ArticlesListNavigator.swift
 //  NYTFeedReader
 //
 //  Created by Jero Sánchez on 05/01/2020.
@@ -8,10 +8,10 @@
 
 import Foundation
 
-extension AppNavigator: FeedFilterNavigationLogic {
+extension AppNavigator: ArticlesListNavigationLogic {
     
-    func navigateToArticlesList() {
-        let viewController = ArticlesListController()
+    func navigateToArticleDetail() {
+        let viewController = ArticleDetailController()
         viewController.navigator = self
         navController?.pushViewController(viewController, animated: true)
     }

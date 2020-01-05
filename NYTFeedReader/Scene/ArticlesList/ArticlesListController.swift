@@ -8,9 +8,15 @@
 
 import UIKit
 
+protocol ArticlesListNavigationLogic {
+    func navigateToArticleDetail()
+}
+
 class ArticlesListController: UIViewController {
     
     // MARK: - Properties
+    
+    var navigator: ArticlesListNavigationLogic?
     
     private(set) var tableView: UITableView
     private let dataSource: ArticlesListDataSource
@@ -59,6 +65,6 @@ extension ArticlesListController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        print("Navigate to article #\(indexPath.row)")
+        navigator?.navigateToArticleDetail()
     }
 }
