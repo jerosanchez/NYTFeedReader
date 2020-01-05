@@ -11,7 +11,6 @@
 		CA2E8A5C23C224100019E107 /* FeedFilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8A5B23C224100019E107 /* FeedFilterController.swift */; };
 		CA2E8A6123C224110019E107 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA2E8A6023C224110019E107 /* Assets.xcassets */; };
 		CA2E8A6423C224110019E107 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA2E8A6223C224110019E107 /* LaunchScreen.storyboard */; };
-		CA2E8A6F23C224110019E107 /* NYTFeedReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8A6E23C224110019E107 /* NYTFeedReaderTests.swift */; };
 		CA2E8A7C23C2257B0019E107 /* FeedFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8A7B23C2257B0019E107 /* FeedFilterView.swift */; };
 		CA2E8A8023C226240019E107 /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8A7F23C226240019E107 /* VerticalStackView.swift */; };
 		CA2E8A8223C2264B0019E107 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8A8123C2264B0019E107 /* UILabel+Extension.swift */; };
@@ -32,6 +31,8 @@
 		CA2E8AA323C233560019E107 /* ArticleDetailNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8AA223C233560019E107 /* ArticleDetailNavigator.swift */; };
 		CA2E8AA723C2367B0019E107 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8AA623C2367B0019E107 /* NetworkingService.swift */; };
 		CA2E8AA923C236920019E107 /* NativeNetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8AA823C236920019E107 /* NativeNetworkingService.swift */; };
+		CA2E8AAC23C237EE0019E107 /* FeedArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8AAB23C237EE0019E107 /* FeedArticle.swift */; };
+		CA2E8AAF23C238100019E107 /* FeedArticleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8AAE23C238100019E107 /* FeedArticleTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +53,6 @@
 		CA2E8A6323C224110019E107 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA2E8A6523C224110019E107 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA2E8A6A23C224110019E107 /* NYTFeedReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NYTFeedReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA2E8A6E23C224110019E107 /* NYTFeedReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTFeedReaderTests.swift; sourceTree = "<group>"; };
 		CA2E8A7023C224110019E107 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA2E8A7B23C2257B0019E107 /* FeedFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFilterView.swift; sourceTree = "<group>"; };
 		CA2E8A7F23C226240019E107 /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
@@ -74,6 +74,8 @@
 		CA2E8AA223C233560019E107 /* ArticleDetailNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailNavigator.swift; sourceTree = "<group>"; };
 		CA2E8AA623C2367B0019E107 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		CA2E8AA823C236920019E107 /* NativeNetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeNetworkingService.swift; sourceTree = "<group>"; };
+		CA2E8AAB23C237EE0019E107 /* FeedArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedArticle.swift; sourceTree = "<group>"; };
+		CA2E8AAE23C238100019E107 /* FeedArticleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedArticleTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		CA2E8A5623C224100019E107 /* NYTFeedReader */ = {
 			isa = PBXGroup;
 			children = (
+				CA2E8AAA23C237D30019E107 /* Domain */,
 				CA2E8A7D23C225F20019E107 /* Helpers */,
 				CA2E8A9823C22E8D0019E107 /* Navigation */,
 				CA2E8A7923C225380019E107 /* Scene */,
@@ -130,7 +133,7 @@
 		CA2E8A6D23C224110019E107 /* NYTFeedReaderTests */ = {
 			isa = PBXGroup;
 			children = (
-				CA2E8A6E23C224110019E107 /* NYTFeedReaderTests.swift */,
+				CA2E8AAD23C238040019E107 /* Domain */,
 				CA2E8A7023C224110019E107 /* Info.plist */,
 			);
 			path = NYTFeedReaderTests;
@@ -223,6 +226,22 @@
 				CA2E8AA823C236920019E107 /* NativeNetworkingService.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		CA2E8AAA23C237D30019E107 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				CA2E8AAB23C237EE0019E107 /* FeedArticle.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		CA2E8AAD23C238040019E107 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				CA2E8AAE23C238100019E107 /* FeedArticleTests.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,6 +365,7 @@
 				CA2E8A8D23C229F10019E107 /* ArticlesListDataSource.swift in Sources */,
 				CA2E8A9F23C231CB0019E107 /* ArticleDetailController.swift in Sources */,
 				CA2E8A8423C226810019E107 /* FeedFilterView+Setup.swift in Sources */,
+				CA2E8AAC23C237EE0019E107 /* FeedArticle.swift in Sources */,
 				CA2E8A5823C224100019E107 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,7 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA2E8A6F23C224110019E107 /* NYTFeedReaderTests.swift in Sources */,
+				CA2E8AAF23C238100019E107 /* FeedArticleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
