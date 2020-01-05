@@ -48,6 +48,8 @@
 		CAD870E823C25B2B008A80C5 /* ArticlesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD870E723C25B2B008A80C5 /* ArticlesListViewModel.swift */; };
 		CAD870EA23C25B57008A80C5 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD870E923C25B57008A80C5 /* Observable.swift */; };
 		CAD870ED23C25B86008A80C5 /* ObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD870EC23C25B86008A80C5 /* ObservableTests.swift */; };
+		CAD870EF23C26580008A80C5 /* FeedFilterCriteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD870EE23C26580008A80C5 /* FeedFilterCriteria.swift */; };
+		CAD870F123C2661A008A80C5 /* FeedFilterCriteriaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD870F023C2661A008A80C5 /* FeedFilterCriteriaTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +108,8 @@
 		CAD870E723C25B2B008A80C5 /* ArticlesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesListViewModel.swift; sourceTree = "<group>"; };
 		CAD870E923C25B57008A80C5 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		CAD870EC23C25B86008A80C5 /* ObservableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableTests.swift; sourceTree = "<group>"; };
+		CAD870EE23C26580008A80C5 /* FeedFilterCriteria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFilterCriteria.swift; sourceTree = "<group>"; };
+		CAD870F023C2661A008A80C5 /* FeedFilterCriteriaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFilterCriteriaTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +274,7 @@
 			children = (
 				CA2E8AAB23C237EE0019E107 /* FeedArticle.swift */,
 				CA2E8AB023C23C680019E107 /* FeedArticleMedia.swift */,
+				CAD870EE23C26580008A80C5 /* FeedFilterCriteria.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -279,6 +284,7 @@
 			children = (
 				CA2E8AAE23C238100019E107 /* FeedArticleTests.swift */,
 				CA2E8AB223C23CC80019E107 /* FeedArticleMediaTests.swift */,
+				CAD870F023C2661A008A80C5 /* FeedFilterCriteriaTests.swift */,
 				CA2E8AB423C2404A0019E107 /* DomainTestHelpers.swift */,
 			);
 			path = Domain;
@@ -454,6 +460,7 @@
 				CA2E8AA323C233560019E107 /* ArticleDetailNavigator.swift in Sources */,
 				CA2E8A9C23C22F750019E107 /* FeedFilterNavigator.swift in Sources */,
 				CA2E8ACD23C25A340019E107 /* ArticlesListAssembly.swift in Sources */,
+				CAD870EF23C26580008A80C5 /* FeedFilterCriteria.swift in Sources */,
 				CA2E8ACA23C259860019E107 /* ServicesRepository.swift in Sources */,
 				CA2E8A8B23C229B60019E107 /* ArticlesListController.swift in Sources */,
 				CA2E8A9523C22BE10019E107 /* ArticlesListCell+Setup.swift in Sources */,
@@ -488,6 +495,7 @@
 			files = (
 				CA2E8AAF23C238100019E107 /* FeedArticleTests.swift in Sources */,
 				CA2E8AB323C23CC80019E107 /* FeedArticleMediaTests.swift in Sources */,
+				CAD870F123C2661A008A80C5 /* FeedFilterCriteriaTests.swift in Sources */,
 				CA2E8AB523C2404A0019E107 /* DomainTestHelpers.swift in Sources */,
 				CAD870ED23C25B86008A80C5 /* ObservableTests.swift in Sources */,
 				CA2E8AC323C249070019E107 /* NYTFeedRemoteRepositoryTests.swift in Sources */,
