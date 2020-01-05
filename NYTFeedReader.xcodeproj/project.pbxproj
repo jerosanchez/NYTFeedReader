@@ -61,6 +61,7 @@
 		CAD8710023C2972B008A80C5 /* AppConfig+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD870FF23C2972B008A80C5 /* AppConfig+Color.swift */; };
 		CAD8710223C29930008A80C5 /* AppConfig+ArticlesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD8710123C29930008A80C5 /* AppConfig+ArticlesList.swift */; };
 		CAD8710423C29B5E008A80C5 /* AppConfig+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD8710323C29B5E008A80C5 /* AppConfig+Size.swift */; };
+		CAD8710623C29E0A008A80C5 /* AppConfig+ArticleDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD8710523C29E0A008A80C5 /* AppConfig+ArticleDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +137,7 @@
 		CAD870FF23C2972B008A80C5 /* AppConfig+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConfig+Color.swift"; sourceTree = "<group>"; };
 		CAD8710123C29930008A80C5 /* AppConfig+ArticlesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConfig+ArticlesList.swift"; sourceTree = "<group>"; };
 		CAD8710323C29B5E008A80C5 /* AppConfig+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConfig+Size.swift"; sourceTree = "<group>"; };
+		CAD8710523C29E0A008A80C5 /* AppConfig+ArticleDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConfig+ArticleDetail.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -414,6 +416,7 @@
 			children = (
 				CAD870F823C28FA9008A80C5 /* AppConfig+FeedFilter.swift */,
 				CAD8710123C29930008A80C5 /* AppConfig+ArticlesList.swift */,
+				CAD8710523C29E0A008A80C5 /* AppConfig+ArticleDetail.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -594,6 +597,7 @@
 				CA2E8A9123C22B610019E107 /* ArticlesListCell.swift in Sources */,
 				CA2E8AB123C23C680019E107 /* FeedArticleMedia.swift in Sources */,
 				CA2E8AA323C233560019E107 /* ArticleDetailNavigator.swift in Sources */,
+				CAD8710623C29E0A008A80C5 /* AppConfig+ArticleDetail.swift in Sources */,
 				CA2E8A9C23C22F750019E107 /* FeedFilterNavigator.swift in Sources */,
 				CA2E8ACD23C25A340019E107 /* ArticlesListAssembly.swift in Sources */,
 				CAD870F723C28EBB008A80C5 /* AppConfig+Repository.swift in Sources */,

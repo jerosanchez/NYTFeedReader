@@ -36,6 +36,6 @@ class ArticleDetailController: UIViewController {
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = false
         
-        navigationItem.title = feedArticle?.title ?? "No title found"
+        navigationItem.title = feedArticle?.title ?? AppConfig.ArticleDetail.defaultSceneTitleText
     }
 }
