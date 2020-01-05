@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ArticlesListNavigationLogic {
-    func navigateToArticleDetail()
+    func navigateToArticleDetail(feedArticle: FeedArticle)
 }
 
 class ArticlesListController: UIViewController {
@@ -82,6 +82,7 @@ extension ArticlesListController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        navigator?.navigateToArticleDetail()
+        let feedArticle = dataSource.feedArticles[indexPath.row]
+        navigator?.navigateToArticleDetail(feedArticle: feedArticle)
     }
 }

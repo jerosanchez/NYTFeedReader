@@ -16,6 +16,8 @@ class ArticleDetailController: UIViewController {
     
     var navigator: ArticleDetailNavigationLogic?
     
+    var feedArticle: FeedArticle?
+    
     private let webView = WKWebView()
     
     // MARK: - Lifecycle
@@ -27,11 +29,13 @@ class ArticleDetailController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let dummyUrlString = "https://apple.com"
-        let dummyUrl = URL(string: dummyUrlString)!
-        webView.load(URLRequest(url: dummyUrl))
+        guard let url = URL(string: feedArticle?.articleURL ?? "") else {
+            // TODO: display alert
+            return
+        }
+        webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = false
         
-        navigationItem.title = "Article title"
+        navigationItem.title = feedArticle?.title ?? "No title found"
     }
 }

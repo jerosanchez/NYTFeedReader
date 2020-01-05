@@ -10,9 +10,10 @@ import Foundation
 
 extension AppNavigator: ArticlesListNavigationLogic {
     
-    func navigateToArticleDetail() {
+    func navigateToArticleDetail(feedArticle: FeedArticle) {
         let viewController = ArticleDetailController()
         viewController.navigator = self
+        viewController.feedArticle = feedArticle
         navController?.pushViewController(viewController, animated: true)
     }
 }
