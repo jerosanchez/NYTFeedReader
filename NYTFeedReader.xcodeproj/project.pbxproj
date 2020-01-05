@@ -225,8 +225,8 @@
 			isa = PBXGroup;
 			children = (
 				CA2E8AAD23C238040019E107 /* Domain */,
+				CAD870EB23C25B73008A80C5 /* Helpers */,
 				CA2E8AC123C248E70019E107 /* Repository */,
-				CAD870EB23C25B73008A80C5 /* Services */,
 				CA2E8A7023C224110019E107 /* Info.plist */,
 			);
 			path = NYTFeedReaderTests;
@@ -405,12 +405,12 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		CAD870EB23C25B73008A80C5 /* Services */ = {
+		CAD870EB23C25B73008A80C5 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				CAD870EC23C25B86008A80C5 /* ObservableTests.swift */,
 			);
-			path = Services;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		CAD870FA23C292E1008A80C5 /* Scenes */ = {

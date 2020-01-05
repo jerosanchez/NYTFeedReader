@@ -20,9 +20,8 @@ The file `NYTFeedReader/Config/AppConfig+Secrets.swift` is missing for security 
 import Foundation
 
 extension AppConfig {
-    
     struct Secrets {
-    static var NYTApiKey = "YOUR_API_KEY"
+        static var NYTApiKey = "YOUR_API_KEY"
     }
 }
 ```
@@ -60,7 +59,7 @@ The code base is organized in the following folders:
 - `Scene` - One subfolder per scene, each one including necessary controllers, subviews, view models, etc.
 - `Service` - Gateway layer between our app and third-party frameworks so it's easy to exchange concrete implementations
 
-The project also includes unit tests for the key components: domain models, helpers (not extensions), repositories and services.
+The project also includes unit tests for the key components: domain models, helpers (not UIKit extensions) and repositories.
 
 A note on file naming notation: a plus (+) sign in a file name means that it implements an extension of a base class. For example, `AppConfig.swift` implements the base class, and `AppConfig+Colors.swift` implements an extension of the class AppConfig to hold the colors configuration.
 
@@ -70,5 +69,5 @@ This technique is also used to implement the assembly and navigation facilities,
 
 Below are some possible improvements that can be tackled:
 
-- Add unit tests also for scenes components
+- Add unit tests for other components, like scenes
 - Add a NYT Feed Reader app icon
