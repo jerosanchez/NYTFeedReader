@@ -16,6 +16,8 @@ extension AppConfig {
         static var formButtonForeground = UIColor.white
         static var formButtonBackground = UIColor.red
         
-        static var pictureBackground = UIColor.init(white: 0.5, alpha: 0.2)
+        static var dummyPictureBackground = UIColor.init(white: 0.5, alpha: 0.2)
+        
+        static var spinner = UIColor.darkGray
     }
 }

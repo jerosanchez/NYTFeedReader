@@ -11,12 +11,12 @@ import UIKit
 extension ArticlesListController {
     
     func setupView() {
-        view.backgroundColor = .white
+        view.backgroundColor = AppConfig.Color.sceneBackground
         
         setupListView()
         setupSpinnerView()
         
-        navigationItem.title = "NYT Feed Reader"
+        navigationItem.title = AppConfig.ArticlesList.sceneTitleText
     }
     
     private func setupListView() {
@@ -27,13 +27,14 @@ extension ArticlesListController {
     }
     
     private func setupSpinnerView() {
-        let scaleSpinner = CGAffineTransform.init(scaleX: 2.5, y: 2.5)
+        let spinnerSize = AppConfig.Size.spinner
+        let scaleSpinner = CGAffineTransform.init(scaleX: spinnerSize, y: spinnerSize)
         spinnerView.transform = scaleSpinner
 
         let displayedController = navigationController?.viewControllers.last
         displayedController?.view.addSubviewForAutolayout(spinnerView)
         spinnerView.centerInSuperview()
-        spinnerView.color = .darkGray
+        spinnerView.color = AppConfig.Color.spinner
         spinnerView.hidesWhenStopped = true
         spinnerView.startAnimating()
     }

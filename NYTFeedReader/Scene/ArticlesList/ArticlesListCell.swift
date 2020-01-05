@@ -13,9 +13,9 @@ class ArticlesListCell: UITableViewCell {
     
     // MARK: - Subviews
     
-    let pictureImageView = UIImageView(width: 60, height: 60, bkColor: .lightGray)
-    let titleLabel = UILabel(font: .boldSystemFont(ofSize: 14))
-    let subtitleLabel = UILabel(font: .systemFont(ofSize: 12))
+    let pictureImageView = UIImageView(width: AppConfig.Size.cellPictures, height: AppConfig.Size.cellPictures, bkColor: AppConfig.Color.dummyPictureBackground)
+    let titleLabel = UILabel(font: AppConfig.Font.listItemTitle)
+    let subtitleLabel = UILabel(font: AppConfig.Font.listItemSubtitle)
     
     // MARK: - Initialization
     
@@ -39,6 +39,6 @@ class ArticlesListCell: UITableViewCell {
         pictureImageView.sd_setImage(with: URL(string: firstImageMetadata?.first?.urlString ?? ""))
         
         titleLabel.text = feedArticle.title
-        subtitleLabel.text = "\(feedArticle.author ?? "anonymus") · \(feedArticle.section ?? "") · \(feedArticle.publishedDate ?? "")"
+        subtitleLabel.text = "\(feedArticle.author ?? AppConfig.ArticlesList.anonymousAuthorName) · \(feedArticle.section ?? "") · \(feedArticle.publishedDate ?? "")"
     }
 }

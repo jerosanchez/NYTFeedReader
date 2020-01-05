@@ -17,5 +17,8 @@ extension AppConfig {
         static let formFieldValue = UIFont.systemFont(ofSize: 14, weight: .light)
         
         static let formButtonTitle = UIFont.boldSystemFont(ofSize: 18)
+        
+        static let listItemTitle = UIFont.boldSystemFont(ofSize: 14)
+        static let listItemSubtitle = UIFont.systemFont(ofSize: 12)
     }
 }

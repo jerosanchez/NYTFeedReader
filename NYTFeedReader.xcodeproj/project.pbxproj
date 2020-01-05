@@ -54,11 +54,13 @@
 		CAD870F123C2661A008A80C5 /* FeedFilterCriteriaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD870F023C2661A008A80C5 /* FeedFilterCriteriaTests.swift */; };
 		CAD870F323C269C3008A80C5 /* FeedFilterAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD870F223C269C3008A80C5 /* FeedFilterAssembly.swift */; };
 		CAD870F523C2818C008A80C5 /* ValuePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD870F423C2818C008A80C5 /* ValuePickerView.swift */; };
-		CAD870F723C28EBB008A80C5 /* AppConfig+NYTFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD870F623C28EBB008A80C5 /* AppConfig+NYTFeed.swift */; };
+		CAD870F723C28EBB008A80C5 /* AppConfig+Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD870F623C28EBB008A80C5 /* AppConfig+Repository.swift */; };
 		CAD870F923C28FA9008A80C5 /* AppConfig+FeedFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD870F823C28FA9008A80C5 /* AppConfig+FeedFilter.swift */; };
 		CAD870FC23C29468008A80C5 /* AppConfig+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD870FB23C29468008A80C5 /* AppConfig+Layout.swift */; };
 		CAD870FE23C295E4008A80C5 /* AppConfig+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD870FD23C295E4008A80C5 /* AppConfig+Font.swift */; };
 		CAD8710023C2972B008A80C5 /* AppConfig+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD870FF23C2972B008A80C5 /* AppConfig+Color.swift */; };
+		CAD8710223C29930008A80C5 /* AppConfig+ArticlesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD8710123C29930008A80C5 /* AppConfig+ArticlesList.swift */; };
+		CAD8710423C29B5E008A80C5 /* AppConfig+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD8710323C29B5E008A80C5 /* AppConfig+Size.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,11 +129,13 @@
 		CAD870F023C2661A008A80C5 /* FeedFilterCriteriaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFilterCriteriaTests.swift; sourceTree = "<group>"; };
 		CAD870F223C269C3008A80C5 /* FeedFilterAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFilterAssembly.swift; sourceTree = "<group>"; };
 		CAD870F423C2818C008A80C5 /* ValuePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValuePickerView.swift; sourceTree = "<group>"; };
-		CAD870F623C28EBB008A80C5 /* AppConfig+NYTFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConfig+NYTFeed.swift"; sourceTree = "<group>"; };
+		CAD870F623C28EBB008A80C5 /* AppConfig+Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConfig+Repository.swift"; sourceTree = "<group>"; };
 		CAD870F823C28FA9008A80C5 /* AppConfig+FeedFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConfig+FeedFilter.swift"; sourceTree = "<group>"; };
 		CAD870FB23C29468008A80C5 /* AppConfig+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConfig+Layout.swift"; sourceTree = "<group>"; };
 		CAD870FD23C295E4008A80C5 /* AppConfig+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConfig+Font.swift"; sourceTree = "<group>"; };
 		CAD870FF23C2972B008A80C5 /* AppConfig+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConfig+Color.swift"; sourceTree = "<group>"; };
+		CAD8710123C29930008A80C5 /* AppConfig+ArticlesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConfig+ArticlesList.swift"; sourceTree = "<group>"; };
+		CAD8710323C29B5E008A80C5 /* AppConfig+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConfig+Size.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -362,8 +366,9 @@
 				CAD870FF23C2972B008A80C5 /* AppConfig+Color.swift */,
 				CAD870FD23C295E4008A80C5 /* AppConfig+Font.swift */,
 				CAD870FB23C29468008A80C5 /* AppConfig+Layout.swift */,
-				CAD870F623C28EBB008A80C5 /* AppConfig+NYTFeed.swift */,
+				CAD870F623C28EBB008A80C5 /* AppConfig+Repository.swift */,
 				CA2E8ABF23C245550019E107 /* AppConfig+Secrets.swift */,
+				CAD8710323C29B5E008A80C5 /* AppConfig+Size.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -408,6 +413,7 @@
 			isa = PBXGroup;
 			children = (
 				CAD870F823C28FA9008A80C5 /* AppConfig+FeedFilter.swift */,
+				CAD8710123C29930008A80C5 /* AppConfig+ArticlesList.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -590,8 +596,9 @@
 				CA2E8AA323C233560019E107 /* ArticleDetailNavigator.swift in Sources */,
 				CA2E8A9C23C22F750019E107 /* FeedFilterNavigator.swift in Sources */,
 				CA2E8ACD23C25A340019E107 /* ArticlesListAssembly.swift in Sources */,
-				CAD870F723C28EBB008A80C5 /* AppConfig+NYTFeed.swift in Sources */,
+				CAD870F723C28EBB008A80C5 /* AppConfig+Repository.swift in Sources */,
 				CAD870F323C269C3008A80C5 /* FeedFilterAssembly.swift in Sources */,
+				CAD8710223C29930008A80C5 /* AppConfig+ArticlesList.swift in Sources */,
 				CAD870EF23C26580008A80C5 /* FeedFilterCriteria.swift in Sources */,
 				CA2E8ACA23C259860019E107 /* ServicesRepository.swift in Sources */,
 				CA2E8A8B23C229B60019E107 /* ArticlesListController.swift in Sources */,
@@ -614,6 +621,7 @@
 				CA2E8A8223C2264B0019E107 /* UILabel+Extension.swift in Sources */,
 				CA2E8A7C23C2257B0019E107 /* FeedFilterView.swift in Sources */,
 				CA2E8A8D23C229F10019E107 /* ArticlesListDataSource.swift in Sources */,
+				CAD8710423C29B5E008A80C5 /* AppConfig+Size.swift in Sources */,
 				CAD870E823C25B2B008A80C5 /* ArticlesListViewModel.swift in Sources */,
 				CA2E8AB923C243520019E107 /* NYTFeedRepository.swift in Sources */,
 				CA2E8A9F23C231CB0019E107 /* ArticleDetailController.swift in Sources */,

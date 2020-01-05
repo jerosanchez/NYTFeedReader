@@ -17,5 +17,8 @@ extension AppConfig {
         static var standatdVerticalPadding: CGFloat = 16
         
         static let formFieldSpacing: CGFloat = 32
+        
+        static let cellVItemSpacing: CGFloat = 8
+        static let cellHItemSpacing: CGFloat = 16
     }
 }

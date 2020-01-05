@@ -48,8 +48,6 @@ class ArticlesListController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "Articles"
-        
         registerCells()
         setupView()
         bindAndFire()

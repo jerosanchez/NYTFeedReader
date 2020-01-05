@@ -18,10 +18,12 @@ extension ArticlesListCell {
             ]),
             VerticalStackView(arrangedSubviews: [
                 titleLabel, subtitleLabel, UIView()
-            ], spacing: 8)
-        ], customSpacing: 16)
+            ], spacing: AppConfig.Layout.cellVItemSpacing)
+        ], customSpacing: AppConfig.Layout.cellHItemSpacing)
         
         contentView.addSubviewForAutolayout(cellStackView)
-        cellStackView.fillSuperview(padding: .init(top: 16, left: 16, bottom: 16, right: 16))
+        let verticalPadding = AppConfig.Layout.standatdVerticalPadding
+        let horizontalPadding = AppConfig.Layout.standardHorizontalPadding
+        cellStackView.fillSuperview(padding: .init(top: verticalPadding, left: horizontalPadding, bottom: verticalPadding, right: horizontalPadding))
     }
 }

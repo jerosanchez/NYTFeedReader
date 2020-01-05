@@ -6,7 +6,7 @@
 //  Copyright © 2020 Jero Sánchez. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 extension AppConfig {
         
