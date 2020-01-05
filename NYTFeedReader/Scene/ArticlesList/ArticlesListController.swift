@@ -17,6 +17,8 @@ class ArticlesListController: UIViewController {
     // MARK: - Properties
     
     var navigator: ArticlesListNavigationLogic?
+
+    var filterCriteria: FeedFilterCriteria?
     
     private(set) var tableView: UITableView
     private let dataSource: ArticlesListDataSource
@@ -75,7 +77,7 @@ class ArticlesListController: UIViewController {
             print("Loading error: \(error?.localizedDescription ?? "Something weird happened... :-(")")
         }
         
-        viewModel.loadArticles()
+        viewModel.loadArticles(using: filterCriteria)
     }
 }
 

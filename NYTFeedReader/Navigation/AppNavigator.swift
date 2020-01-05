@@ -20,7 +20,7 @@ class AppNavigator {
     func start() {
         // Initialize homeController with a
         // different controller to change how the app starts
-        let homeController = FeedFilterController()
+        let homeController = DependencyContainer.feedFilterController
         homeController.navigator = self
         navController = UINavigationController(rootViewController: homeController)
         

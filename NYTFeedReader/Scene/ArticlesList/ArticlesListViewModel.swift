@@ -28,11 +28,13 @@ class ArticlesListViewModel {
     
     // MARK: - API
     
-    func loadArticles() {
+    func loadArticles(using filterCriteria: FeedFilterCriteria?) {
+        guard let filterCriteria = filterCriteria else { return }
+        
         repository.fetchArticles(
-            articleType: .viewed,
-            timeWindow: .oneDayAgo,
-            sharingSources: []) { result in
+            articleType: filterCriteria.articleType,
+            timeWindow: filterCriteria.timeWindow,
+            sharingSources: filterCriteria.sharingSources) { result in
             
             switch result {
             case .success(let feedArticles):

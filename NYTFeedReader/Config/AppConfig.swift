@@ -8,4 +8,10 @@
 
 import Foundation
 
-struct AppConfig { }
+struct AppConfig {
+    
+    static let defaultFilterCriteria = FeedFilterCriteria(
+        articleType: .viewed,
+        sharingSources: [SharingSource](),
+        timeWindow: .oneDayAgo)
+}

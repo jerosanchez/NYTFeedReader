@@ -9,7 +9,7 @@
 import UIKit
 
 protocol FeedFilterNavigationLogic {
-    func navigateToArticlesList()
+    func navigateToArticlesList(using filterCriteria: FeedFilterCriteria)
 }
 
 class FeedFilterController: UIViewController {
@@ -18,7 +18,20 @@ class FeedFilterController: UIViewController {
     
     var navigator: FeedFilterNavigationLogic?
     
+    private var filterCriteria: FeedFilterCriteria
+
     private let sceneView = FeedFilterView()
+    
+    // MARK: - Initialization
+    
+    init(defaultFilterCriteria: FeedFilterCriteria) {
+        self.filterCriteria = defaultFilterCriteria
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // MARK: - Lifecycle
     
@@ -40,6 +53,6 @@ class FeedFilterController: UIViewController {
 extension FeedFilterController: FeedFilterViewDelegate {
     
     func didSelectFindArticles() {
-        navigator?.navigateToArticlesList()
+        navigator?.navigateToArticlesList(using: filterCriteria)
     }
 }

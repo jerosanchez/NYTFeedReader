@@ -50,6 +50,7 @@
 		CAD870ED23C25B86008A80C5 /* ObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD870EC23C25B86008A80C5 /* ObservableTests.swift */; };
 		CAD870EF23C26580008A80C5 /* FeedFilterCriteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD870EE23C26580008A80C5 /* FeedFilterCriteria.swift */; };
 		CAD870F123C2661A008A80C5 /* FeedFilterCriteriaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD870F023C2661A008A80C5 /* FeedFilterCriteriaTests.swift */; };
+		CAD870F323C269C3008A80C5 /* FeedFilterAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD870F223C269C3008A80C5 /* FeedFilterAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		CAD870EC23C25B86008A80C5 /* ObservableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableTests.swift; sourceTree = "<group>"; };
 		CAD870EE23C26580008A80C5 /* FeedFilterCriteria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFilterCriteria.swift; sourceTree = "<group>"; };
 		CAD870F023C2661A008A80C5 /* FeedFilterCriteriaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFilterCriteriaTests.swift; sourceTree = "<group>"; };
+		CAD870F223C269C3008A80C5 /* FeedFilterAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFilterAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -339,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				CA2E8ACC23C25A340019E107 /* ArticlesListAssembly.swift */,
+				CAD870F223C269C3008A80C5 /* FeedFilterAssembly.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				CA2E8AA323C233560019E107 /* ArticleDetailNavigator.swift in Sources */,
 				CA2E8A9C23C22F750019E107 /* FeedFilterNavigator.swift in Sources */,
 				CA2E8ACD23C25A340019E107 /* ArticlesListAssembly.swift in Sources */,
+				CAD870F323C269C3008A80C5 /* FeedFilterAssembly.swift in Sources */,
 				CAD870EF23C26580008A80C5 /* FeedFilterCriteria.swift in Sources */,
 				CA2E8ACA23C259860019E107 /* ServicesRepository.swift in Sources */,
 				CA2E8A8B23C229B60019E107 /* ArticlesListController.swift in Sources */,
