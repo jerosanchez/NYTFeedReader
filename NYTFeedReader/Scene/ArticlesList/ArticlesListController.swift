@@ -23,9 +23,9 @@ class ArticlesListController: UIViewController {
     
     // MARK: - Initialization
     
-    init() {
+    init(dataSource: ArticlesListDataSource) {
         self.tableView = UITableView()
-        self.dataSource = ArticlesListDataSource()
+        self.dataSource = dataSource
         
         super.init(nibName: nil, bundle: nil)
         

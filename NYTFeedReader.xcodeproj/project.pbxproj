@@ -41,6 +41,10 @@
 		CA2E8ABE23C2453D0019E107 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8ABD23C2453D0019E107 /* AppConfig.swift */; };
 		CA2E8AC023C245550019E107 /* AppConfig+Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8ABF23C245550019E107 /* AppConfig+Secrets.swift */; };
 		CA2E8AC323C249070019E107 /* NYTFeedRemoteRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8AC223C249070019E107 /* NYTFeedRemoteRepositoryTests.swift */; };
+		CA2E8AC623C2593C0019E107 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8AC523C2593C0019E107 /* DependencyContainer.swift */; };
+		CA2E8AC823C259610019E107 /* RepositoriesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8AC723C259610019E107 /* RepositoriesAssembly.swift */; };
+		CA2E8ACA23C259860019E107 /* ServicesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8AC923C259860019E107 /* ServicesRepository.swift */; };
+		CA2E8ACD23C25A340019E107 /* ArticlesListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8ACC23C25A340019E107 /* ArticlesListAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +96,10 @@
 		CA2E8ABD23C2453D0019E107 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		CA2E8ABF23C245550019E107 /* AppConfig+Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConfig+Secrets.swift"; sourceTree = "<group>"; };
 		CA2E8AC223C249070019E107 /* NYTFeedRemoteRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTFeedRemoteRepositoryTests.swift; sourceTree = "<group>"; };
+		CA2E8AC523C2593C0019E107 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		CA2E8AC723C259610019E107 /* RepositoriesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesAssembly.swift; sourceTree = "<group>"; };
+		CA2E8AC923C259860019E107 /* ServicesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesRepository.swift; sourceTree = "<group>"; };
+		CA2E8ACC23C25A340019E107 /* ArticlesListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesListAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +141,7 @@
 		CA2E8A5623C224100019E107 /* NYTFeedReader */ = {
 			isa = PBXGroup;
 			children = (
+				CA2E8AC423C2592E0019E107 /* Assembly */,
 				CA2E8ABC23C245260019E107 /* Config */,
 				CA2E8AAA23C237D30019E107 /* Domain */,
 				CA2E8A7D23C225F20019E107 /* Helpers */,
@@ -300,6 +309,25 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		CA2E8AC423C2592E0019E107 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				CA2E8ACB23C25A1E0019E107 /* Scenes */,
+				CA2E8AC523C2593C0019E107 /* DependencyContainer.swift */,
+				CA2E8AC723C259610019E107 /* RepositoriesAssembly.swift */,
+				CA2E8AC923C259860019E107 /* ServicesRepository.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		CA2E8ACB23C25A1E0019E107 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CA2E8ACC23C25A340019E107 /* ArticlesListAssembly.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -400,12 +428,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA2E8AC623C2593C0019E107 /* DependencyContainer.swift in Sources */,
+				CA2E8AC823C259610019E107 /* RepositoriesAssembly.swift in Sources */,
 				CA2E8ABE23C2453D0019E107 /* AppConfig.swift in Sources */,
 				CA2E8AC023C245550019E107 /* AppConfig+Secrets.swift in Sources */,
 				CA2E8A9123C22B610019E107 /* ArticlesListCell.swift in Sources */,
 				CA2E8AB123C23C680019E107 /* FeedArticleMedia.swift in Sources */,
 				CA2E8AA323C233560019E107 /* ArticleDetailNavigator.swift in Sources */,
 				CA2E8A9C23C22F750019E107 /* FeedFilterNavigator.swift in Sources */,
+				CA2E8ACD23C25A340019E107 /* ArticlesListAssembly.swift in Sources */,
+				CA2E8ACA23C259860019E107 /* ServicesRepository.swift in Sources */,
 				CA2E8A8B23C229B60019E107 /* ArticlesListController.swift in Sources */,
 				CA2E8A9523C22BE10019E107 /* ArticlesListCell+Setup.swift in Sources */,
 				CA2E8A9323C22BB20019E107 /* UIImageView+Extension.swift in Sources */,

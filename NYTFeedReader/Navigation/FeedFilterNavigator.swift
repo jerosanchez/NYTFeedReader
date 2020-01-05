@@ -11,7 +11,7 @@ import Foundation
 extension AppNavigator: FeedFilterNavigationLogic {
     
     func navigateToArticlesList() {
-        let viewController = ArticlesListController()
+        let viewController = DependencyContainer.articlesListController
         viewController.navigator = self
         navController?.pushViewController(viewController, animated: true)
     }
