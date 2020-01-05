@@ -16,8 +16,8 @@ class NYTFeedRemoteRepository: NYTFeedRepository {
     
     // MARK: - Initialization
     
-    init() {
-        self.networkingService = NativeNetworkingService()
+    init(networkingService: NetworkingService = NativeNetworkingService()) {
+        self.networkingService = networkingService
     }
     
     // MARK: - Implementation

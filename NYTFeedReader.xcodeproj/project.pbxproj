@@ -40,6 +40,7 @@
 		CA2E8ABB23C243BD0019E107 /* NYTFeedRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8ABA23C243BD0019E107 /* NYTFeedRemoteRepository.swift */; };
 		CA2E8ABE23C2453D0019E107 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8ABD23C2453D0019E107 /* AppConfig.swift */; };
 		CA2E8AC023C245550019E107 /* AppConfig+Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8ABF23C245550019E107 /* AppConfig+Secrets.swift */; };
+		CA2E8AC323C249070019E107 /* NYTFeedRemoteRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8AC223C249070019E107 /* NYTFeedRemoteRepositoryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		CA2E8ABA23C243BD0019E107 /* NYTFeedRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTFeedRemoteRepository.swift; sourceTree = "<group>"; };
 		CA2E8ABD23C2453D0019E107 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		CA2E8ABF23C245550019E107 /* AppConfig+Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConfig+Secrets.swift"; sourceTree = "<group>"; };
+		CA2E8AC223C249070019E107 /* NYTFeedRemoteRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTFeedRemoteRepositoryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 		CA2E8A6D23C224110019E107 /* NYTFeedReaderTests */ = {
 			isa = PBXGroup;
 			children = (
+				CA2E8AC123C248E70019E107 /* Repository */,
 				CA2E8AAD23C238040019E107 /* Domain */,
 				CA2E8A7023C224110019E107 /* Info.plist */,
 			);
@@ -289,6 +292,14 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		CA2E8AC123C248E70019E107 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				CA2E8AC223C249070019E107 /* NYTFeedRemoteRepositoryTests.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -427,6 +438,7 @@
 				CA2E8AAF23C238100019E107 /* FeedArticleTests.swift in Sources */,
 				CA2E8AB323C23CC80019E107 /* FeedArticleMediaTests.swift in Sources */,
 				CA2E8AB523C2404A0019E107 /* DomainTestHelpers.swift in Sources */,
+				CA2E8AC323C249070019E107 /* NYTFeedRemoteRepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

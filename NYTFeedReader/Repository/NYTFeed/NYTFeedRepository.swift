@@ -8,19 +8,19 @@
 
 import Foundation
 
-enum ArticleType: String {
+enum ArticleType: String, CaseIterable {
     case emailed
     case viewed
     case shared
 }
 
-enum TimeWindow: Int {
+enum TimeWindow: Int, CaseIterable {
     case oneDayAgo = 1
     case oneWeekAgo = 7
     case oneMonthAgo = 30
 }
 
-enum SharingSource: String {
+enum SharingSource: String, CaseIterable {
     case twitter
     case facebook
 }
