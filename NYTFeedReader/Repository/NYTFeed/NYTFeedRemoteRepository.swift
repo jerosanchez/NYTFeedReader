@@ -33,10 +33,10 @@ class NYTFeedRemoteRepository: NYTFeedRepository {
             // TODO: avoid duplication of sharing sources
             socialNetwork = ""
         }
-        let baseURL = "https://api.nytimes.com/svc/mostpopular/v2/"
+        let baseURL = AppConfig.NYTFeed.baseURL
         let urlString = baseURL + apiPath + socialNetwork + ".json" + apiKeyParam
         
-        print("Fetching: \(urlString)")
+        print("🚀 GET \(urlString)")
         
         networkingService.fetch(urlString: urlString) { (result: Result<ResponseModel, Error>) in
             switch result {

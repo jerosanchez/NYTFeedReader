@@ -24,22 +24,22 @@ class FeedFilterView: UIView {
     
     // MARK: - Subviews
     
-    let instructionsLabel = UILabel(text: "Please, select a filter criteria below:", font: .boldSystemFont(ofSize: 16))
+    let instructionsLabel = UILabel(text: AppConfig.FeedFilter.helpText, font: AppConfig.Font.formHelpLabel)
     
-    let articleTypeFieldLabel = UILabel(text: "Article type:", font: .systemFont(ofSize: 16))
-    let articleTypeValueLabel = UILabel(font: .systemFont(ofSize: 14, weight: .light))
+    let articleTypeFieldLabel = UILabel(text: AppConfig.FeedFilter.articleTypeLabelText, font: AppConfig.Font.formFieldLabel)
+    let articleTypeValueLabel = UILabel(font: AppConfig.Font.formFieldValue)
     
-    let timeWindowFieldLabel = UILabel(text: "Time window:", font: .systemFont(ofSize: 16))
-    let timeWindowValueLabel = UILabel(font: .systemFont(ofSize: 14, weight: .light))
+    let timeWindowFieldLabel = UILabel(text: AppConfig.FeedFilter.timeWindowLabelText, font: AppConfig.Font.formFieldLabel)
+    let timeWindowValueLabel = UILabel(font: AppConfig.Font.formFieldValue)
     
-    let twitterSourceFieldLabel = UILabel(text: "Twitter", font: .systemFont(ofSize: 16))
+    let twitterSourceFieldLabel = UILabel(text: AppConfig.FeedFilter.twitterLabelText, font: AppConfig.Font.formFieldLabel)
     let twitterSourceSwitch = UISwitch()
     
-    let facebookSourceFieldLabel = UILabel(text: "Facebook", font: .systemFont(ofSize: 16))
+    let facebookSourceFieldLabel = UILabel(text: AppConfig.FeedFilter.facebookLabelText, font: AppConfig.Font.formFieldLabel)
     let facebookSourceSwitch = UISwitch()
     
     lazy var sharedStackView: VerticalStackView = {
-        let sharedInLabel = UILabel(text: "Shared in:", font: .systemFont(ofSize: 16))
+        let sharedInLabel = UILabel(text: AppConfig.FeedFilter.sharedInLabelText, font: AppConfig.Font.formFieldLabel)
         return VerticalStackView(arrangedSubviews: [
             sharedInLabel,
             UIStackView(arrangedSubviews: [
@@ -53,10 +53,10 @@ class FeedFilterView: UIView {
     
     let findArticlesButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Find articles", for: .normal)
-        button.backgroundColor = .red
-        button.titleLabel?.font = .boldSystemFont(ofSize: 18)
-        button.setTitleColor(.white, for: .normal)
+        button.setTitle(AppConfig.FeedFilter.findArticlesButtonTitle, for: .normal)
+        button.backgroundColor = AppConfig.Color.formButtonBackground
+        button.titleLabel?.font = AppConfig.Font.formButtonTitle
+        button.setTitleColor(AppConfig.Color.formButtonForeground, for: .normal)
         return button
     }()
     
@@ -94,11 +94,11 @@ class FeedFilterView: UIView {
         let timeWindowString: String
         switch filterCriteria.timeWindow.rawValue {
         case 1:
-            timeWindowString = "last day"
+            timeWindowString = AppConfig.FeedFilter.timeWindow1
         case 7:
-            timeWindowString = "last week"
+            timeWindowString = AppConfig.FeedFilter.timeWindow7
         default:
-            timeWindowString = "last month"
+            timeWindowString = AppConfig.FeedFilter.timeWindow30
         }
         timeWindowValueLabel.text = timeWindowString
     }

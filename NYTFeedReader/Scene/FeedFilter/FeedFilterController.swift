@@ -42,7 +42,7 @@ class FeedFilterController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "Filter"
+        navigationItem.title = AppConfig.FeedFilter.sceneTitleText
         
         sceneView.delegate = self
         sceneView.update(using: filterCriteria)
@@ -54,7 +54,7 @@ class FeedFilterController: UIViewController {
 extension FeedFilterController: FeedFilterViewDelegate {
     
     func didSelectChangeArticleType() {
-        let alertView = UIAlertController(title: "Select article type:", message: "", preferredStyle: .actionSheet)
+        let alertView = UIAlertController(title: AppConfig.FeedFilter.articleTypePickerHelpText, message: "", preferredStyle: .actionSheet)
         
         let options = ArticleType.allCases.enumerated().map { "\($0.element.rawValue)" }
         let pickerView = ValuePickerView(options: options)
@@ -72,7 +72,7 @@ extension FeedFilterController: FeedFilterViewDelegate {
     }
     
     func didSelectChangeTimeWindow() {
-        let alertView = UIAlertController(title: "Select time window:", message: "", preferredStyle: .actionSheet)
+        let alertView = UIAlertController(title: AppConfig.FeedFilter.timeWindowPickerHelpText, message: "", preferredStyle: .actionSheet)
         
         let options = TimeWindow.allCases.enumerated().map { "\($0.element.rawValue)" }
         let pickerView = ValuePickerView(options: options)

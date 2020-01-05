@@ -11,7 +11,7 @@ import UIKit
 extension FeedFilterView {
     
     func setupView() {
-        backgroundColor = .white
+        backgroundColor = AppConfig.Color.sceneBackground
         
         articleTypeValueLabel.textAlignment = .right
         timeWindowValueLabel.textAlignment = .right
@@ -34,10 +34,12 @@ extension FeedFilterView {
             timeWindowStackView,
             findArticlesButton,
             UIView()
-        ], spacing: 32)
+        ], spacing: AppConfig.Layout.formFieldSpacing)
         
         addSubviewForAutolayout(stackView)
-        stackView.fillSuperview(padding: .init(top: 16 + 100, left: 16, bottom: 16, right: 16))
+        let verticalPadding = AppConfig.Layout.standatdVerticalPadding
+        let horizontalPadding = AppConfig.Layout.standardHorizontalPadding
+        stackView.fillSuperview(padding: .init(top: verticalPadding + AppConfig.Layout.navigationBarSkipPadding, left: horizontalPadding, bottom: verticalPadding, right: horizontalPadding))
     }
     
     func setupActions() {
