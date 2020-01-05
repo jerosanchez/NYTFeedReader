@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ArticlesListCell: UITableViewCell {
     
@@ -31,6 +32,12 @@ class ArticlesListCell: UITableViewCell {
     // MARK: - API
     
     func configure(withFeedArticle feedArticle: FeedArticle) {
+        accessoryType = .disclosureIndicator
+        
+        let firstImage = feedArticle.media?.filter { $0.type == "image" }.first
+        let firstImageMetadata = firstImage?.metadata
+        pictureImageView.sd_setImage(with: URL(string: firstImageMetadata?.first?.urlString ?? ""))
+        
         titleLabel.text = feedArticle.title
         subtitleLabel.text = "\(feedArticle.author ?? "anonymus") · \(feedArticle.section ?? "") · \(feedArticle.publishedDate ?? "")"
     }
