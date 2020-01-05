@@ -21,6 +21,8 @@ class ArticlesListController: UIViewController {
     private(set) var tableView: UITableView
     private let dataSource: ArticlesListDataSource
     private let viewModel: ArticlesListViewModel
+
+    private(set) var spinnerView = UIActivityIndicatorView(style: .gray)
     
     // MARK: - Initialization
     
@@ -59,12 +61,17 @@ class ArticlesListController: UIViewController {
     
     private func bindAndFire() {
         viewModel.feedArticles.bind { feedArticles in
+            self.spinnerView.stopAnimating()
+            self.tableView.isHidden = false
+            
             self.dataSource.feedArticles = feedArticles
             self.tableView.reloadData()
         }
         viewModel.loadingError.bind { error in
+            self.spinnerView.stopAnimating()
+            
             // Should not be executed with an error nil,
-            // but I prefer not to use the bang operator just in case
+            // but prefer not to use the bang operator just in case
             print("Loading error: \(error?.localizedDescription ?? "Something weird happened... :-(")")
         }
         

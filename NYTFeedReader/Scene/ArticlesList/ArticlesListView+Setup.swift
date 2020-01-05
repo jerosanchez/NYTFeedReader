@@ -14,6 +14,7 @@ extension ArticlesListController {
         view.backgroundColor = .white
         
         setupListView()
+        setupSpinnerView()
         
         navigationItem.title = "NYT Feed Reader"
     }
@@ -22,5 +23,18 @@ extension ArticlesListController {
         let displayedController = navigationController?.viewControllers.last
         displayedController?.view.addSubviewForAutolayout(tableView)
         tableView.fillSuperview()
+        tableView.isHidden = true // while loading data
+    }
+    
+    private func setupSpinnerView() {
+        let scaleSpinner = CGAffineTransform.init(scaleX: 2.5, y: 2.5)
+        spinnerView.transform = scaleSpinner
+
+        let displayedController = navigationController?.viewControllers.last
+        displayedController?.view.addSubviewForAutolayout(spinnerView)
+        spinnerView.centerInSuperview()
+        spinnerView.color = .darkGray
+        spinnerView.hidesWhenStopped = true
+        spinnerView.startAnimating()
     }
 }
