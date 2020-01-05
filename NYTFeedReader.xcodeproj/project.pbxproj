@@ -45,6 +45,9 @@
 		CA2E8AC823C259610019E107 /* RepositoriesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8AC723C259610019E107 /* RepositoriesAssembly.swift */; };
 		CA2E8ACA23C259860019E107 /* ServicesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8AC923C259860019E107 /* ServicesRepository.swift */; };
 		CA2E8ACD23C25A340019E107 /* ArticlesListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8ACC23C25A340019E107 /* ArticlesListAssembly.swift */; };
+		CAD870E823C25B2B008A80C5 /* ArticlesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD870E723C25B2B008A80C5 /* ArticlesListViewModel.swift */; };
+		CAD870EA23C25B57008A80C5 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD870E923C25B57008A80C5 /* Observable.swift */; };
+		CAD870ED23C25B86008A80C5 /* ObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD870EC23C25B86008A80C5 /* ObservableTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +103,9 @@
 		CA2E8AC723C259610019E107 /* RepositoriesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesAssembly.swift; sourceTree = "<group>"; };
 		CA2E8AC923C259860019E107 /* ServicesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesRepository.swift; sourceTree = "<group>"; };
 		CA2E8ACC23C25A340019E107 /* ArticlesListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesListAssembly.swift; sourceTree = "<group>"; };
+		CAD870E723C25B2B008A80C5 /* ArticlesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesListViewModel.swift; sourceTree = "<group>"; };
+		CAD870E923C25B57008A80C5 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		CAD870EC23C25B86008A80C5 /* ObservableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,8 +166,9 @@
 		CA2E8A6D23C224110019E107 /* NYTFeedReaderTests */ = {
 			isa = PBXGroup;
 			children = (
-				CA2E8AC123C248E70019E107 /* Repository */,
 				CA2E8AAD23C238040019E107 /* Domain */,
+				CA2E8AC123C248E70019E107 /* Repository */,
+				CAD870EB23C25B73008A80C5 /* Services */,
 				CA2E8A7023C224110019E107 /* Info.plist */,
 			);
 			path = NYTFeedReaderTests;
@@ -192,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				CA2E8A7E23C225FF0019E107 /* UIKit */,
+				CAD870E923C25B57008A80C5 /* Observable.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -216,6 +224,7 @@
 				CA2E8A8C23C229F10019E107 /* ArticlesListDataSource.swift */,
 				CA2E8A9023C22B610019E107 /* ArticlesListCell.swift */,
 				CA2E8A9423C22BE10019E107 /* ArticlesListCell+Setup.swift */,
+				CAD870E723C25B2B008A80C5 /* ArticlesListViewModel.swift */,
 			);
 			path = ArticlesList;
 			sourceTree = "<group>";
@@ -326,6 +335,14 @@
 				CA2E8ACC23C25A340019E107 /* ArticlesListAssembly.swift */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		CAD870EB23C25B73008A80C5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CAD870EC23C25B86008A80C5 /* ObservableTests.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,6 +457,7 @@
 				CA2E8ACA23C259860019E107 /* ServicesRepository.swift in Sources */,
 				CA2E8A8B23C229B60019E107 /* ArticlesListController.swift in Sources */,
 				CA2E8A9523C22BE10019E107 /* ArticlesListCell+Setup.swift in Sources */,
+				CAD870EA23C25B57008A80C5 /* Observable.swift in Sources */,
 				CA2E8A9323C22BB20019E107 /* UIImageView+Extension.swift in Sources */,
 				CA2E8A8823C227370019E107 /* FeedFilterView+Actions.swift in Sources */,
 				CA2E8A5C23C224100019E107 /* FeedFilterController.swift in Sources */,
@@ -455,6 +473,7 @@
 				CA2E8A8223C2264B0019E107 /* UILabel+Extension.swift in Sources */,
 				CA2E8A7C23C2257B0019E107 /* FeedFilterView.swift in Sources */,
 				CA2E8A8D23C229F10019E107 /* ArticlesListDataSource.swift in Sources */,
+				CAD870E823C25B2B008A80C5 /* ArticlesListViewModel.swift in Sources */,
 				CA2E8AB923C243520019E107 /* NYTFeedRepository.swift in Sources */,
 				CA2E8A9F23C231CB0019E107 /* ArticleDetailController.swift in Sources */,
 				CA2E8A8423C226810019E107 /* FeedFilterView+Setup.swift in Sources */,
@@ -470,6 +489,7 @@
 				CA2E8AAF23C238100019E107 /* FeedArticleTests.swift in Sources */,
 				CA2E8AB323C23CC80019E107 /* FeedArticleMediaTests.swift in Sources */,
 				CA2E8AB523C2404A0019E107 /* DomainTestHelpers.swift in Sources */,
+				CAD870ED23C25B86008A80C5 /* ObservableTests.swift in Sources */,
 				CA2E8AC323C249070019E107 /* NYTFeedRemoteRepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

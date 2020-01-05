@@ -12,10 +12,16 @@ extension DependencyContainer {
     
     static var articlesListController: ArticlesListController {
         return ArticlesListController(
-            dataSource: articlesListDataSource)
+            dataSource: articlesListDataSource,
+            viewModel: articlesListViewModel)
     }
     
     static var articlesListDataSource: ArticlesListDataSource {
         return ArticlesListDataSource()
+    }
+    
+    static var articlesListViewModel: ArticlesListViewModel {
+        return ArticlesListViewModel(
+            repository: nytFeedRepository)
     }
 }

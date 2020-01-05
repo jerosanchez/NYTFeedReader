@@ -20,12 +20,14 @@ class ArticlesListController: UIViewController {
     
     private(set) var tableView: UITableView
     private let dataSource: ArticlesListDataSource
+    private let viewModel: ArticlesListViewModel
     
     // MARK: - Initialization
     
-    init(dataSource: ArticlesListDataSource) {
+    init(dataSource: ArticlesListDataSource, viewModel: ArticlesListViewModel) {
         self.tableView = UITableView()
         self.dataSource = dataSource
+        self.viewModel = viewModel
         
         super.init(nibName: nil, bundle: nil)
         
@@ -46,12 +48,27 @@ class ArticlesListController: UIViewController {
         
         registerCells()
         setupView()
+        bindAndFire()
     }
     
     // MARK: - Helpers
     
     private func registerCells() {
         tableView.register(ArticlesListCell.self, forCellReuseIdentifier: ArticlesListCell.description())
+    }
+    
+    private func bindAndFire() {
+        viewModel.feedArticles.bind { feedArticles in
+            self.dataSource.feedArticles = feedArticles
+            self.tableView.reloadData()
+        }
+        viewModel.loadingError.bind { error in
+            // Should not be executed with an error nil,
+            // but I prefer not to use the bang operator just in case
+            print("Loading error: \(error?.localizedDescription ?? "Something weird happened... :-(")")
+        }
+        
+        viewModel.loadArticles()
     }
 }
 

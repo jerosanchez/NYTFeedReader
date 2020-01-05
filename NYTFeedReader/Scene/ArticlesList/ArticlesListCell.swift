@@ -30,8 +30,8 @@ class ArticlesListCell: UITableViewCell {
     
     // MARK: - API
     
-    func configure() {
-        titleLabel.text = "Title"
-        subtitleLabel.text = "Author · Section · Date"
+    func configure(withFeedArticle feedArticle: FeedArticle) {
+        titleLabel.text = feedArticle.title
+        subtitleLabel.text = "\(feedArticle.author ?? "anonymus") · \(feedArticle.section ?? "") · \(feedArticle.publishedDate ?? "")"
     }
 }

@@ -10,15 +10,20 @@ import UIKit
 
 class ArticlesListDataSource: NSObject, UITableViewDataSource {
     
+    // MARK: - Properties
+    
+    var feedArticles = [FeedArticle]()
+    
     // MARK: - Implementation
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return feedArticles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ArticlesListCell.description(), for: indexPath) as! ArticlesListCell
-        cell.configure()
+        let feedArticle = feedArticles[indexPath.row]
+        cell.configure(withFeedArticle: feedArticle)
         return cell
     }
 }
