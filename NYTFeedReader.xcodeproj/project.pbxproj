@@ -138,6 +138,7 @@
 		CAD8710123C29930008A80C5 /* AppConfig+ArticlesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConfig+ArticlesList.swift"; sourceTree = "<group>"; };
 		CAD8710323C29B5E008A80C5 /* AppConfig+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConfig+Size.swift"; sourceTree = "<group>"; };
 		CAD8710523C29E0A008A80C5 /* AppConfig+ArticleDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConfig+ArticleDetail.swift"; sourceTree = "<group>"; };
+		CAD8710723C29E8E008A80C5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +184,7 @@
 		CA2E8A4B23C224100019E107 = {
 			isa = PBXGroup;
 			children = (
+				CAD8710723C29E8E008A80C5 /* README.md */,
 				CA2E8A5623C224100019E107 /* NYTFeedReader */,
 				CA2E8A6D23C224110019E107 /* NYTFeedReaderTests */,
 				CA2E8A5523C224100019E107 /* Products */,
