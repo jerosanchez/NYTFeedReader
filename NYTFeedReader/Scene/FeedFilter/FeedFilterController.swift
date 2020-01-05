@@ -8,9 +8,15 @@
 
 import UIKit
 
+protocol FeedFilterNavigationLogic {
+    func navigateToArticlesList()
+}
+
 class FeedFilterController: UIViewController {
 
     // MARK: - Properties
+    
+    var navigator: FeedFilterNavigationLogic?
     
     private let sceneView = FeedFilterView()
     
@@ -23,7 +29,7 @@ class FeedFilterController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "NYT Feed Reader"
+        navigationItem.title = "Filter"
         
         sceneView.delegate = self
     }
@@ -34,6 +40,6 @@ class FeedFilterController: UIViewController {
 extension FeedFilterController: FeedFilterViewDelegate {
     
     func didSelectFindArticles() {
-        print("Tapped <Find article> button")
+        navigator?.navigateToArticlesList()
     }
 }

@@ -25,6 +25,8 @@
 		CA2E8A9323C22BB20019E107 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8A9223C22BB20019E107 /* UIImageView+Extension.swift */; };
 		CA2E8A9523C22BE10019E107 /* ArticlesListCell+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8A9423C22BE10019E107 /* ArticlesListCell+Setup.swift */; };
 		CA2E8A9723C22C210019E107 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8A9623C22C210019E107 /* UIStackView.swift */; };
+		CA2E8A9A23C22EAB0019E107 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8A9923C22EAB0019E107 /* AppNavigator.swift */; };
+		CA2E8A9C23C22F750019E107 /* FeedFilterNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E8A9B23C22F750019E107 /* FeedFilterNavigator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		CA2E8A9223C22BB20019E107 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		CA2E8A9423C22BE10019E107 /* ArticlesListCell+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticlesListCell+Setup.swift"; sourceTree = "<group>"; };
 		CA2E8A9623C22C210019E107 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		CA2E8A9923C22EAB0019E107 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
+		CA2E8A9B23C22F750019E107 /* FeedFilterNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFilterNavigator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		CA2E8A5623C224100019E107 /* NYTFeedReader */ = {
 			isa = PBXGroup;
 			children = (
+				CA2E8A9823C22E8D0019E107 /* Navigation */,
 				CA2E8A7D23C225F20019E107 /* Helpers */,
 				CA2E8A7923C225380019E107 /* Scene */,
 				CA2E8A5723C224100019E107 /* AppDelegate.swift */,
@@ -170,6 +175,15 @@
 				CA2E8A9423C22BE10019E107 /* ArticlesListCell+Setup.swift */,
 			);
 			path = ArticlesList;
+			sourceTree = "<group>";
+		};
+		CA2E8A9823C22E8D0019E107 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				CA2E8A9923C22EAB0019E107 /* AppNavigator.swift */,
+				CA2E8A9B23C22F750019E107 /* FeedFilterNavigator.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA2E8A9123C22B610019E107 /* ArticlesListCell.swift in Sources */,
+				CA2E8A9C23C22F750019E107 /* FeedFilterNavigator.swift in Sources */,
 				CA2E8A8B23C229B60019E107 /* ArticlesListController.swift in Sources */,
 				CA2E8A9523C22BE10019E107 /* ArticlesListCell+Setup.swift in Sources */,
 				CA2E8A9323C22BB20019E107 /* UIImageView+Extension.swift in Sources */,
@@ -281,6 +296,7 @@
 				CA2E8A8623C226F30019E107 /* UIView+Extension.swift in Sources */,
 				CA2E8A9723C22C210019E107 /* UIStackView.swift in Sources */,
 				CA2E8A8F23C22AA20019E107 /* ArticlesListView+Setup.swift in Sources */,
+				CA2E8A9A23C22EAB0019E107 /* AppNavigator.swift in Sources */,
 				CA2E8A8023C226240019E107 /* VerticalStackView.swift in Sources */,
 				CA2E8A8223C2264B0019E107 /* UILabel+Extension.swift in Sources */,
 				CA2E8A7C23C2257B0019E107 /* FeedFilterView.swift in Sources */,
