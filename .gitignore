@@ -1,4 +1,3 @@
-
 # Created by https://www.gitignore.io/api/xcode,macos,swift,cocoapods
 # Edit at https://www.gitignore.io/?templates=xcode,macos,swift,cocoapods
 
@@ -138,3 +137,5 @@ iOSInjectionProject/
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.gitignore.io/api/xcode,macos,swift,cocoapods
+
+NYTFeedReader/Config/AppConfig+Secrets.swift
