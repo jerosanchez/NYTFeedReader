@@ -62,22 +62,27 @@ class ArticlesListController: UIViewController {
     }
     
     private func bindAndFire() {
-        viewModel.feedArticles.bind { feedArticles in
-            self.spinnerView.stopAnimating()
-            self.tableView.isHidden = false
-            
-            self.dataSource.feedArticles = feedArticles
-            self.tableView.reloadData()
+        viewModel.feedArticles.bind { [weak self] feedArticles in
+            self?.updateSceneView(using: feedArticles)
         }
-        viewModel.loadingError.bind { error in
-            self.spinnerView.stopAnimating()
+        viewModel.loadingError.bind { [weak self] error in
+            self?.spinnerView.stopAnimating()
             
-            // Should not be executed with an error nil,
-            // but prefer not to use the bang operator just in case
-            print("Loading error: \(error?.localizedDescription ?? "Something weird happened... :-(")")
+            guard let error = error else { return }
+            print("Loading error: \(error.localizedDescription)")
         }
         
         viewModel.loadArticles(using: filterCriteria)
+    }
+    
+    // MARK: - Helpers
+    
+    private func updateSceneView(using feedArticles: [FeedArticle]) {
+        spinnerView.stopAnimating()
+        tableView.isHidden = false
+        
+        dataSource.feedArticles = feedArticles
+        tableView.reloadData()
     }
 }
 
